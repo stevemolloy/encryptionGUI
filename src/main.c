@@ -229,7 +229,7 @@ int main(void) {
           passwd_details.passwd[0] = '\0';
           state.state = WAITING_FOR_PASSWD;
         }
-        float spacing = 2;
+        float spacing = 1;
         Vector2 passwd_text_size = MeasureTextEx(font, passwd_details.salt, FONTSIZE, spacing);
         DrawTextEx(font, passwd_details.salt, (Vector2){.x=window_width/2.0 - passwd_text_size.x/2.0, .y=textBox.y}, FONTSIZE, spacing, BACKGROUND_COLOUR);
       } else if (state.state == WAITING_FOR_PASSWD) {
